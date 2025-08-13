@@ -1,4 +1,4 @@
-# 🚗 Used Car Price Predictor
+ ** Price Prediction Of Used Car **
 
 ![Banner](static/Images/web_page.png)
 
@@ -19,7 +19,7 @@ Despite the dataset being quite small (only 724 rows after cleaning), I achieved
 
 ---
 
-## 📌 Project Objectives
+##  Project Objectives
 
 * ✅ Practice **data preprocessing**
 * ✅ Apply **feature transformation** using `ColumnTransformer`
@@ -30,7 +30,7 @@ Despite the dataset being quite small (only 724 rows after cleaning), I achieved
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Used-Cars-Price-Prediction/
@@ -56,16 +56,16 @@ Used-Cars-Price-Prediction/
 
 ---
 
-## 💠 How to Run This Project
+##  How to Run This Project
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/Used-Cars-Price-Prediction.git
 cd Used-Cars-Price-Prediction
 ```
 
-### 2️⃣ Create & Activate Virtual Environment
+### 2️ Create & Activate Virtual Environment
 
 **Windows (PowerShell):**
 
@@ -81,13 +81,13 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3️⃣ Install Dependencies
+### 3️ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run the Application
+### 4️ Run the Application
 
 ```bash
 python app.py
@@ -102,7 +102,7 @@ Open your browser and visit: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
-## 🔍 Dataset Information
+##  Dataset Information
 
 The dataset was collected from a publicly available source containing details like:
 
@@ -117,9 +117,9 @@ I did some manual cleaning and saved the final data as `car_data.csv`.
 
 ---
 
-## 🔬 Technologies Used
+##  Technologies Used
 
-* Python 🐍
+* Python 
 * pandas, NumPy
 * scikit-learn
 * Flask
@@ -128,7 +128,7 @@ I did some manual cleaning and saved the final data as `car_data.csv`.
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Improve accuracy with more data and feature engineering
 * Try advanced regressors (Random Forest, XGBoost)
@@ -138,7 +138,7 @@ I did some manual cleaning and saved the final data as `car_data.csv`.
 
 ---
 
-## 🙌 Contribution & Feedback
+## Contribution & Feedback
 
 This project is a personal learning initiative, but I'm open to:
 
@@ -148,12 +148,11 @@ This project is a personal learning initiative, but I'm open to:
 
 Feel free to fork or raise an issue!
 
----
-
-## 📜 License
+- License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
-**Thanks for checking it out! 🚗💻**
+
+**Thanks for checking it out! **
