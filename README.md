@@ -6,7 +6,7 @@ Provide necessary input using provided dropdown-option and also enter Kilometers
 ![providing_input](Static/input.png)
 
 After Providing all the info `Press` **Predict price** Button
-![predict_price](static/Images/prediction.png)
+![predict_price](Static/prediction.png)
 
 Welcome to **Used Car Price Predictor**, an end-to-end Machine Learning project that predicts the resale value of used cars. This is my very first ML project, where I put into practice what I've recently learned about:
 
@@ -156,6 +156,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 **Thanks for checking it out! **
+
 
 
 
