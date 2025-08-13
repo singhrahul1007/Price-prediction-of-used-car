@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tipto's Car Price Predictor</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Car Price Predictor</h1>
+
+    <form method="POST" action="/">
+      <div class="form-group">
+        <label for="company">Select Company</label>
+        <select class="form-control" id="company" name="company" required>
+          <option disabled selected>Select company</option>
+          {% for company in company_name %}
+            <option value="{{ company }}">{{ company }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="car_model">Select Car Model</label>
+        <select class="form-control" id="car_model" name="car_model" required>
+          <option disabled selected>Select a company first</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="year">Select Year</label>
+        <select class="form-control" name="year" required>
+          {% for y in year %}
+            <option value="{{ y }}">{{ y }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fuel_type">Select Fuel Type</label>
+        <select class="form-control" name="fuel_type" required>
+          {% for fuel in fuel_type %}
+            <option value="{{ fuel }}">{{ fuel }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="kms_driven">Kilometers Driven</label>
+        <input type="number" class="form-control" id="kms_driven" name="kms_driven" placeholder="Enter kilometers driven" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Predict Price</button>
+    </form>
+
+    {% if predicted_price is not none %}
+      <div class="alert alert-info text-center mt-4">
+        <h4>Estimated Price: TK {{ predicted_price }}</h4>
+      </div>
+    {% endif %}
+  </div>
+
+  <script>
+    document.getElementById('company').addEventListener('change', function () {
+      const selectedCompany = this.value;
+
+      fetch('/get_models', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ company: selectedCompany })
+      })
+      .then(response => response.json())
+      .then(models => {
+        const modelSelect = document.getElementById('car_model');
+        modelSelect.innerHTML = '';
+
+        if (models.length === 0) {
+          const option = document.createElement('option');
+          option.disabled = true;
+          option.selected = true;
+          option.textContent = 'No models found';
+          modelSelect.appendChild(option);
+        } else {
+          const defaultOption = document.createElement('option');
+          defaultOption.disabled = true;
+          defaultOption.selected = true;
+          defaultOption.textContent = 'Select car model';
+          modelSelect.appendChild(defaultOption);
+
+          models.forEach(model => {
+            const option = document.createElement('option');
+            option.value = model;
+            option.textContent = model;
+            modelSelect.appendChild(option);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
