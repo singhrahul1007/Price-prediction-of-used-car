@@ -1,6 +1,6 @@
  ** Price Prediction Of Used Car **
 
-![Banner](static/Images/web_page.png)
+![imaagealt](Static/web_page.png)
 
 Provide necessary input using provided dropdown-option and also enter Kilometers Driven amount
 ![providing_input](static/Images/input.png)
@@ -156,3 +156,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 **Thanks for checking it out! **
+
