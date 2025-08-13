@@ -3,7 +3,7 @@
 ![imaagealt](Static/web_page.png)
 
 Provide necessary input using provided dropdown-option and also enter Kilometers Driven amount
-![providing_input](Static/prediction.png)
+![providing_input](Static/input.png)
 
 After Providing all the info `Press` **Predict price** Button
 ![predict_price](static/Images/prediction.png)
@@ -156,5 +156,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 **Thanks for checking it out! **
+
 
 
